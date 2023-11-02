@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "font-awesome": "^4.7.0",
+    "material-icons": "^1.13.12",
     "vue": "^3.2.13"
   },
   "devDependencies": {

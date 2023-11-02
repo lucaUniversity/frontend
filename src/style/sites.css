@@ -1,0 +1,26 @@
+@import 'font-awesome/css/font-awesome.min.css';
+@import 'material-icons/iconfont/material-icons.css';
+
+.header {
+    margin-top: -150px; /* Remove margin to place it at the top left */
+    font-size: 24px;
+    padding: 20px; /* Add padding for spacing */
+  }
+  
+  .content {
+    padding-top: 200px;
+  }
+  
+
+  
+  .box {
+    border-width: 2px; 
+    border-style: solid; 
+    border-color: #8a8a8a; 
+    border-radius: 5px;
+    background-color: white; 
+  }
+
+  .box:hover {
+    transform: scale(1.1); 
+  }

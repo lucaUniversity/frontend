@@ -1,0 +1,55 @@
+@import 'font-awesome/css/font-awesome.min.css';
+@import 'material-icons/iconfont/material-icons.css';
+
+#app {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #2e8b57;
+  color: #fff;
+  transition: width 0.3s;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  margin-right: 100px;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 250px; 
+  transition: margin-left 0.3s; 
+}
+
+.sidebar.collapsed ~ .main-content {
+  margin-left: 60px; 
+}
+.sidebar.collapsed {
+  width: 60px;
+}
+
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.chevron-icon {
+  margin-top: 80%;
+  font-size: 24px;
+  color: #333; 
+  cursor: pointer;
+  transition: transform 0.3s; 
+}
+
+.chevron-icon:hover {
+  transform: scale(1.2); 
+}
