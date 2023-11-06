@@ -16,6 +16,10 @@
   bottom: 0;
   margin-right: 100px;
 }
+.page-header {
+  margin-top: -130px;
+  text-align: left;
+}
 
 .main-content {
   flex-grow: 1;
@@ -30,7 +34,6 @@
 .sidebar.collapsed {
   width: 60px;
 }
-
 
 .sidebar ul {
   list-style-type: none;

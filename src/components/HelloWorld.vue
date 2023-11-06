@@ -10,7 +10,7 @@ import ProfileContent from './ProfileContent.vue'
 <template>
   <div id="app">
     <nav class="sidebar" :class="{ collapsed: isCollapsed }">
-      <ul>
+      <ul style="margin-top: 20px;">
         <li @click="showDashboardContent" v-if="!isCollapsed">
           <span class="material-icons">
             dashboard
@@ -69,6 +69,10 @@ import ProfileContent from './ProfileContent.vue'
     </nav>
 
     <div class="main-content">
+      <header class="page-header">
+        <h1>{{ selectedContentTitle }}</h1>
+      </header>
+
       <main>
         <template v-if="selectedContent === 'DataContent'">
           <DataContent />
@@ -100,26 +104,26 @@ export default {
   data() {
     return {
       isCollapsed: false,
-      selectedContent: null,
-      selectedContentTitle: '',
+      selectedContent: 'DataContent',
+      selectedContentTitle: 'Data',
     };
   },
   methods: {
     showDataContent() {
       this.selectedContent = 'DataContent';
-      this.selectedContentTitle = 'Data Content';
+      this.selectedContentTitle = 'Data';
     },
     showPortfolioContent() {
       this.selectedContent = 'PortfolioContent';
-      this.selectedContentTitle = 'Portfolio Content';
+      this.selectedContentTitle = 'Portfolio';
     },
     showDashboardContent() {
       this.selectedContent = 'DashboardContent';
-      this.selectedContentTitle = 'Dashboard Content';
+      this.selectedContentTitle = 'Dashboard';
     },
     showProfileContent() {
       this.selectedContent = 'ProfileContent';
-      this.selectedContentTitle = 'Profile Content';
+      this.selectedContentTitle = 'Profile';
     },
     toggleSidebar() {
       this.isCollapsed = !this.isCollapsed;
@@ -129,6 +133,7 @@ export default {
     },
   },
 };
+
 </script>
 
 

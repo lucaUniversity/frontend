@@ -1,8 +1,5 @@
 <template>
   <div>
-    <header class="header">
-      <h1>Portfolio</h1>
-    </header>
     <div class="content">
       Portfolio is working fine total
     </div>
@@ -10,9 +7,9 @@
 </template>
 
 <script>
-  export default {
-    name: 'ProtfolioContent',
-  };
+export default {
+  name: 'ProtfolioContent',
+};
 </script>
 
 <style scoped>

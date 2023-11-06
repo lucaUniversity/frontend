@@ -1,11 +1,10 @@
 <template>
-  <div>
-    <header class="header">
-      <h1>Dashboard</h1>
-    </header>
+  <div class="info">
     <div class="content">
       Dashboard is working fine total
       <div>
+        <h1 class="display-4">Hello, Vue.js with Bootstrap!</h1>
+    <button class="btn btn-primary">Click me</button>
     <i class="fa fa-check"></i> This is a check icon.
   </div>
     </div>

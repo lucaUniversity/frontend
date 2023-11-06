@@ -1,37 +1,44 @@
 <template>
   <div>
-    <header class="header">
-      <h1>Data</h1>
-    </header>
-    <div class="content">
-      Data is working fine total
+    <div class="info">
+      <div class="content">
+        Dashboard is working fine total
+      </div>
+      <i class="fa fa-check"></i> This is a check icon.
     </div>
-    <div class="rounded-boxes">
-      <div class="box">
-        Google Cloud
-      </div>
-      <div class="box">
-        AWS
-      </div>
-      <div class="box">
-        Microsoft Azure
-      </div>
-      <div class="box">
+    <button class="box" >
+      <div>
         Oracle Cloud
       </div>
-
-    </div>
+    </button>
+    <button v-for="box in boxes" :key="box.id" class="box" >
+      <div>
+        {{ box.content }}
+      </div>
+    </button>
+    
   </div>
-
 </template>
 
-  
 <script>
-  export default {
-    name: 'DataContent',
-  };
-</script>
+
+export default {
+  name: 'DataContent',
+  components: {
+  },
+  data() {
+    return {
+      boxes: [
+        { id: 1, content: 'AWS' },
+        { id: 2, content: 'Google Cloud' },
+        { id: 3, content: 'Microsoft Azure' },
+        { id: 4, content: 'SAP Cloud' },
+        { id: 5, content: 'Cisco' },
+      ],
+      modalContent: '', 
+    };
+  },
   
-<style scoped>
-@import '@/style/sites.css';
-</style>
+};
+</script>
+
