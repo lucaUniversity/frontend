@@ -1,12 +1,36 @@
 <template>
-  <div class="info">
-    <div class="content">
-      Dashboard is working fine total
+  <div class="info w-100">
+    <div class="content mb-5">
+      
       <div>
-        <h1 class="display-4">Hello, Vue.js with Bootstrap!</h1>
-    <button class="btn btn-primary">Click me</button>
-    <i class="fa fa-check"></i> This is a check icon.
+        <h3>Hey, thanks for using this Forecasting tool !</h3>
+      </div>
+    </div>
   </div>
+ 
+  <div class="container" >
+    <div class="row" >
+      <div class="col">
+        <div>
+          <div class="m-3 box-small">
+            Notifications
+          </div>
+        </div>
+        <div>
+          <div class="mt-2 ml-1 box-small">
+            Conntected Data
+          </div>
+        </div>
+        
+      </div>
+      <div class="col">
+        <div>
+          <div class="m-3 box-big" >
+          Forecast
+         </div>
+        </div>
+       
+      </div>
     </div>
   </div>
 </template>

@@ -1,33 +1,40 @@
 @import 'font-awesome/css/font-awesome.min.css';
 @import 'material-icons/iconfont/material-icons.css';
 
-.header {
-  position: absolute;
-  width: 100%;
-  margin-top: -150px; 
-  font-size: 24px;
-  padding: 20px;   
-}
+
   
 .content {
-  margin-top: 50px;
   padding: 20px;
 }
 
-
-
 .info {
   background-color: antiquewhite; 
-  padding-left: 300px;
   border-radius: 5px;
 }
 
+.container {
+  background-color: whitesmoke;
+  min-width: 2000px ;
+  height: 920px;
+}
 
-.box {
+
+.box-big{
   display: inline-block;
-  width: 250px;
-  height: 170px;
-  margin: 10px;
+  width: 900px;
+  height: 877px;
+  border: 1px solid  lightgray;
+  background-color: lightgray;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+
+}
+
+.box-small {
+  display: inline-block;
+  width: 880px;
+  height: 425px;
   border: 1px solid  lightgray;
   background-color: lightgray;
   border-radius: 5px;
@@ -35,16 +42,82 @@
   padding: 10px;
 }
 
-.box-sm {
-  width: 150px;
-  height: 75px;
+
+
+@media (max-width: 2300px) {
+  .container {
+    background-color: whitesmoke;
+    min-width: 1600px ;
+    height: 870px;
+  }
+  .box-small {
+    width: 680px;
+    height: 400px;
+  }
+  .box-big {
+    width: 800px;
+    height: 823px;
+  }
 }
 
-.box-md {
-  width: 175px;
-  height: 87.5px;
+@media (max-width: 1900px) {
+  .container {
+    background-color: whitesmoke;
+    min-width: 1400px ;
+    height: 850px;
+  }
+  .box-small {
+    width: 600px;
+    height: 387px;
+  }
+  .box-big {
+    width: 600px;
+    height: 800px;
+  }
+}
+@media (max-width: 1720px) {
+  .container {
+    background-color: whitesmoke;
+    min-width: 1160px ;
+    height: 800px;
+  }
+  .box-small {
+    width: 520px;
+    height: 363px;
+  }
+  .box-big {
+    width: 520px;
+    height: 750px;
+  }
 }
 
-.box:hover {
-  transform: scale(1.05); 
+@media (max-width: 1000px) {
+  .box-small {
+    width: 400px;
+    height: 280px;
+  }
+  .box-big {
+    width: 400px;
+    height: 800px;
+  }
+}
+
+@media (max-width: 500px) {
+  .box-small {
+    width: 200px;
+    height: 200px;
+  }
+  .box-big {
+    width: 200px;
+    height: 600px;
+  }
+}
+
+
+
+.box-small:hover {
+  transform: scale(1.02); 
+}
+.box-big:hover {
+  transform: scale(1.02); 
 }

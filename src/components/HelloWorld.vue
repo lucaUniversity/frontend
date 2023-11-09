@@ -3,59 +3,46 @@
 import DashboardContent from './DashboardContent.vue'
 import DataContent from './DataContent.vue'
 import PortfolioContent from './PortfolioContent.vue'
-import ProfileContent from './ProfileContent.vue'
 
 </script>
 
 <template>
-  <div id="app">
+  <div id="app" class="w-100 h-100">
     <nav class="sidebar" :class="{ collapsed: isCollapsed }">
-      <ul style="margin-top: 20px;">
-        <li @click="showDashboardContent" v-if="!isCollapsed">
+      <ul class="mt-5">
+        <li class="pb-3" @click="showDashboardContent" v-if="!isCollapsed">
           <span class="material-icons">
             dashboard
           </span>
           Dashboard
         </li>
-        <li @click="showDashboardContent" v-if="isCollapsed">
+        <li class="pb-3" @click="showDashboardContent" v-if="isCollapsed">
           <span class="material-icons">
             dashboard
           </span>
         </li>
 
-        <li @click="showPortfolioContent" v-if="!isCollapsed">
+        <li class="pb-3" @click="showPortfolioContent" v-if="!isCollapsed">
           <span class="material-icons">
             leaderboard
           </span>
           Portfolio
         </li>
-        <li @click="showPortfolioContent" v-if="isCollapsed">
+        <li class="pb-3" @click="showPortfolioContent" v-if="isCollapsed">
           <span class="material-icons">
             leaderboard
           </span>
         </li>
 
-        <li @click="showDataContent" v-if="!isCollapsed">
+        <li class="pb-3" @click="showDataContent" v-if="!isCollapsed">
           <span class="material-icons">
           folder
           </span>
           Data
         </li>
-        <li @click="showDataContent" v-if="isCollapsed">
+        <li class="pb-3" @click="showDataContent" v-if="isCollapsed">
           <span class="material-icons">
           folder
-          </span>
-        </li>
-
-        <li @click="showProfileContent" v-if="!isCollapsed">
-          <span class="material-icons">
-            account_circle
-          </span>
-          Profile
-        </li>
-        <li @click="showProfileContent" v-if="isCollapsed">
-          <span class="material-icons">
-            account_circle
           </span>
         </li>
 
@@ -67,25 +54,22 @@ import ProfileContent from './ProfileContent.vue'
       <div>
   </div>
     </nav>
-
-    <div class="main-content">
-      <header class="page-header">
+   
+    <div class="main-content p-5">
+      <header class="page-header mb-2">
         <h1>{{ selectedContentTitle }}</h1>
       </header>
 
       <main>
-        <template v-if="selectedContent === 'DataContent'">
-          <DataContent />
-        </template>
+
+          <DataContent v-if="selectedContent === 'DataContent'"/>
         <template v-if="selectedContent === 'PortfolioContent'">
           <PortfolioContent />
         </template>   
         <template v-if="selectedContent === 'DashboardContent'">
           <DashboardContent />
         </template>
-        <template v-if="selectedContent === 'ProfileContent'">
-          <ProfileContent />
-        </template>  
+ 
      </main>
     </div>
   </div>
@@ -98,14 +82,13 @@ export default {
   components: {
     DataContent,
     PortfolioContent,
-    ProfileContent,
     DashboardContent
   },
   data() {
     return {
       isCollapsed: false,
-      selectedContent: 'DataContent',
-      selectedContentTitle: 'Data',
+      selectedContent: 'DashboardContent',
+      selectedContentTitle: 'Dashboard',
     };
   },
   methods: {
@@ -121,10 +104,7 @@ export default {
       this.selectedContent = 'DashboardContent';
       this.selectedContentTitle = 'Dashboard';
     },
-    showProfileContent() {
-      this.selectedContent = 'ProfileContent';
-      this.selectedContentTitle = 'Profile';
-    },
+
     toggleSidebar() {
       this.isCollapsed = !this.isCollapsed;
     },
