@@ -4,24 +4,24 @@
     <GoogleCloudModal v-else-if="modalActive === 2" @close="toggleModal" :modalActive="modalActive" />
 
     <div class="container d-flex flex-wrap">
-      <div class="box" @click="toggleModal('1')">
+      <div class="box-small m-2" @click="toggleModal('1')">
+        Oracle
         <img src="@/assets/kisspng-oracle-cloud-cloud-computing-oracle-corporation-da-financial-sector-5ade40d295ef68.5673599215245150266141.png" style="height: 80%; width: 100%;" alt="Oracle Cloud">
       </div>
 
-      <div class="box" @click="toggleModal('2')">
+      <div class="box-small m-2" @click="toggleModal('2')" >
+        Google
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Google_Cloud_Platform_logo_(2020).svg/1200px-Google_Cloud_Platform_logo_(2020).svg.png" style="height: 80%; width: 100%;" alt="Google Cloud">
       </div>
 
-      <div class="box">Box 3</div>
-      <div class="box">Box 4</div>
-      <div class="box">Box 5</div>
+
     </div>
   </div>
 </template>
 
 <script>
-import GoogleCloudModal from "@/components/DataModal/GoogleCloudModal.vue";
-import OracleCloudModal from "@/components/DataModal/OracleCloudModal.vue";
+import GoogleCloudModal from "@/components/Modal/GoogleCloudModal.vue";
+import OracleCloudModal from "@/components/Modal/OracleCloudModal.vue";
 
 import { ref } from "vue";
 

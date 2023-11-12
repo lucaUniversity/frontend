@@ -16,7 +16,7 @@ import PortfolioContent from './PortfolioContent.vue'
           </span>
           Dashboard
         </li>
-        <li class="pb-3" @click="showDashboardContent" v-if="isCollapsed">
+        <li class="pb-3" @click="showDashboardContent" v-if="isCollapsed" >
           <span class="material-icons">
             dashboard
           </span>
@@ -51,12 +51,10 @@ import PortfolioContent from './PortfolioContent.vue'
         <button @click="toggleSidebar" class="chevron-icon" v-if="isCollapsed">»</button>
         <button @click="toggleSidebar" class="chevron-icon" v-if="!isCollapsed">«</button>
       </div>
-      <div>
-  </div>
     </nav>
    
     <div class="main-content p-5">
-      <header class="page-header mb-2">
+      <header class="page-header mb-2 info">
         <h1>{{ selectedContentTitle }}</h1>
       </header>
 
@@ -86,7 +84,7 @@ export default {
   },
   data() {
     return {
-      isCollapsed: false,
+      isCollapsed: true,
       selectedContent: 'DashboardContent',
       selectedContentTitle: 'Dashboard',
     };

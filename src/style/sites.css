@@ -13,18 +13,19 @@
 }
 
 .container {
-  background-color: whitesmoke;
+  border-radius: 5px;
+  background-color: none;
   min-width: 2000px ;
-  height: 920px;
+  height: 940px;
 }
 
 
 .box-big{
   display: inline-block;
   width: 900px;
-  height: 877px;
-  border: 1px solid  lightgray;
-  background-color: lightgray;
+  height: 830px;
+  border: 1px solid  gainsboro;
+  background-color: whitesmoke;
   border-radius: 5px;
   text-align: center;
   padding: 10px;
@@ -34,9 +35,9 @@
 .box-small {
   display: inline-block;
   width: 880px;
-  height: 425px;
-  border: 1px solid  lightgray;
-  background-color: lightgray;
+  height: 390px;
+  border: 1px solid  gainsboro;
+  background-color: whitesmoke;
   border-radius: 5px;
   text-align: center;
   padding: 10px;
@@ -46,78 +47,76 @@
 
 @media (max-width: 2300px) {
   .container {
-    background-color: whitesmoke;
     min-width: 1600px ;
     height: 870px;
   }
   .box-small {
     width: 680px;
-    height: 400px;
+    height: 350px;
   }
   .box-big {
     width: 800px;
-    height: 823px;
+    height: 760px;
   }
 }
 
 @media (max-width: 1900px) {
   .container {
-    background-color: whitesmoke;
     min-width: 1400px ;
     height: 850px;
   }
   .box-small {
-    width: 600px;
-    height: 387px;
+    width: 620px;
+    height: 343px;
   }
   .box-big {
-    width: 600px;
-    height: 800px;
+    width: 620px;
+    height: 750px;
   }
 }
 @media (max-width: 1720px) {
   .container {
-    background-color: whitesmoke;
     min-width: 1160px ;
     height: 800px;
   }
   .box-small {
-    width: 520px;
-    height: 363px;
+    width: 550px;
+    height: 320px;
   }
   .box-big {
-    width: 520px;
-    height: 750px;
+    width: 550px;
+    height: 700px;
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1560px) {
   .box-small {
-    width: 400px;
-    height: 280px;
+    width: 510px;
+    height: 320px;
   }
   .box-big {
-    width: 400px;
-    height: 800px;
+    width: 510px;
+    height: 700px;
   }
 }
 
-@media (max-width: 500px) {
-  .box-small {
-    width: 200px;
-    height: 200px;
-  }
-  .box-big {
-    width: 200px;
-    height: 600px;
-  }
+.box-portfolio {
+  width: 100px;
+  height: 430px;
+  border: 1px solid  lightgray;
+  background-color: lightgray;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
 }
-
 
 
 .box-small:hover {
-  transform: scale(1.02); 
+  transform: scale(1.004); 
+  border-color: gray;
 }
 .box-big:hover {
-  transform: scale(1.02); 
+  transform: scale(1.004); 
+  border-color: gray;
+
 }
